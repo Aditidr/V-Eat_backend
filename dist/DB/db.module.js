@@ -18,11 +18,11 @@ exports.DatabaseModule = DatabaseModule = __decorate([
         imports: [
             typeorm_1.TypeOrmModule.forRoot({
                 type: 'postgres',
-                host: process.env.HOST,
-                port: parseInt(process.env.PORT),
-                username: process.env.USERNAME,
-                password: process.env.PASSWORD,
-                database: process.env.DATABASE,
+                host: 'aws-0-ap-south-1.pooler.supabase.com',
+                port: 5432,
+                username: 'postgres.urjpeckgwbbvlyzgxxmo',
+                password: 'gFgdRHR6dT1lZ1N2',
+                database: 'postgres',
                 entities: [users_entity_1.User],
                 synchronize: true
             })
