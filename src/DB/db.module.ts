@@ -3,21 +3,19 @@ import { TypeOrmModule } from "@nestjs/typeorm";
 import { User } from "src/feature/users/users.entity";
 
 @Module({
-    imports: [
-      TypeOrmModule.forRoot({
-        // name: 'gameChangerDB',
-          type: 'postgres',
-          host: process.env.HOST,
-          port: parseInt(process.env.PORT),
-          username: process.env.USERNAME,
-          password: process.env.PASSWORD,
-          database: process.env.DATABASE,
-          entities: [User],
-          synchronize: true
-          
-        })
-      ]
+  imports: [
+    TypeOrmModule.forRoot({
+      type: 'postgres',
+      host: 'aws-0-ap-south-1.pooler.supabase.com',
+      port: 5432,
+      username: 'postgres.urjpeckgwbbvlyzgxxmo',
+      password: 'gFgdRHR6dT1lZ1N2',
+      database: 'postgres',
+      entities: [User],
+      synchronize: true
+    })
+  ]
 })
-export class DatabaseModule{
-    
+export class DatabaseModule {
+
 }
