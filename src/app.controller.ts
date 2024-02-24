@@ -1,5 +1,6 @@
-import { Controller, Get } from '@nestjs/common';
+import { Body, Controller, Get, Post, Req } from '@nestjs/common';
 import { AppService } from './app.service';
+import { TestDto } from './feature/users/users.dto';
 //for api calls
 @Controller()
 export class AppController {
